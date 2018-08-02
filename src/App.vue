@@ -10,7 +10,7 @@ export default {
 }
 </script>
 
-<style lang="less">
+<style>
 .page-demo {
     padding-bottom: 50px;
     .indexicon {
@@ -27,16 +27,14 @@ export default {
       }
     }
   }
-  @component-namespace page {
-    @component title {
-      font-size: 20px;
-      margin: 20px auto;
-      text-align: center;
+  .page-title{
+      font-size: 24px;
+      margin: 40px 8px;
+      text-align: left;
       display: block;
       line-height: 1;
-    }
-    @component part {
+  }
+  .page-part {
       margin-bottom: 15px;
-    }
   }
 </style>

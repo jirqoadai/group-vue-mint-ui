@@ -1,57 +1,119 @@
 <template>
-  <div class="page-toast">
-    <h1 class="page-title">Toast</h1>
-    <div class="page-toast-wrapper">
-      <mt-button @click.native="openToast" size="large">点击弹出 Toast</mt-button>
-      <mt-button @click.native="openToastWithIcon" size="large">点击弹出带有 icon 的 Toast</mt-button>
-      <mt-button @click.native="openBottomToast" size="large">自定义 Toast 位置</mt-button>
+  <div class="page-loadmore">
+    <h1 class="page-title">Pull down</h1>
+    <p class="page-loadmore-desc">在列表顶端, 按住 - 下拉 - 释放可以获取更多数据</p>
+    <p class="page-loadmore-desc">此例请使用手机查看</p>
+    <p class="page-loadmore-desc">translate : {{ translate }}</p>
+    <div class="loading-background" :style="{ transform: 'scale3d(' + moveTranslate + ',' + moveTranslate + ',1)' }">
+      translateScale : {{ moveTranslate }}
+    </div>
+    <div class="page-loadmore-wrapper" ref="wrapper" :style="{ height: wrapperHeight + 'px' }">
+      <mt-loadmore :top-method="loadTop" @translate-change="translateChange" @top-status-change="handleTopChange" ref="loadmore">
+        <ul class="page-loadmore-list">
+          <li v-for="item in list" class="page-loadmore-listitem" v-bind:key="item.index">{{ item }}</li>
+        </ul>
+        <div slot="top" class="mint-loadmore-top">
+          <span v-show="topStatus !== 'loading'" :class="{ 'is-rotate': topStatus === 'drop' }">↓</span>
+          <span v-show="topStatus === 'loading'">
+            <mt-spinner type="snake"></mt-spinner>
+          </span>
+        </div>
+      </mt-loadmore>
     </div>
   </div>
 </template>
-
 <script>
-import { Toast } from 'mint-ui'
 export default {
-  name: 'PullDown',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      list: [],
+      topStatus: '',
+      wrapperHeight: 0,
+      translate: 0,
+      moveTranslate: 0
     }
   },
   methods: {
-    openToast () {
-      Toast('提示信息')
+    handleTopChange (status) {
+      this.moveTranslate = 1
+      this.topStatus = status
     },
-    openToastWithIcon () {
-      Toast({
-        message: '操作成功',
-        iconClass: 'mintui mintui-success'
-      })
+    translateChange (translate) {
+      const translateNum = +translate
+      this.translate = translateNum.toFixed(2)
+      this.moveTranslate = (1 + translateNum / 70).toFixed(2)
     },
-    openBottomToast () {
-      Toast({
-        message: '提示信息',
-        position: 'bottom'
-      })
+    loadTop () {
+      setTimeout(() => {
+        let firstValue = this.list[0]
+        for (let i = 1; i <= 10; i++) {
+          this.list.unshift(firstValue - i)
+        }
+        this.$refs.loadmore.onTopLoaded()
+      }, 1500)
     }
+  },
+  created () {
+    for (let i = 1; i <= 20; i++) {
+      this.list.push(i)
+    }
+  },
+  mounted () {
+    this.wrapperHeight = document.documentElement.clientHeight - this.$refs.wrapper.getBoundingClientRect().top
   }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-h1, h2 {
-  font-weight: normal;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
+<style scoped lang="scss">
+  .page-loadmore{
+      width: 100%;
+      overflow-x: hidden;
+      &-desc {
+        text-align: center;
+        color: #666;
+        padding-bottom: 5px;
+        &:last-of-type {
+          border-bottom: solid 1px #eee;
+        }
+      }
+
+      &-listitem {
+        height: 50px;
+        line-height: 50px;
+        border-bottom: solid 1px #eee;
+        text-align: center;
+        &:first-child {
+          border-top: solid 1px #eee;
+        }
+      }
+
+      &-wrapper {
+        margin-top: -1px;
+        overflow: scroll;
+      }
+
+      .mint-spinner {
+        display: inline-block;
+        vertical-align: middle;
+      }
+  }
+  .loading-background{
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    transition: .2s linear;
+  }
+  .mint-loadmore-top {
+    span {
+      display: inline-block;
+      transition: .2s linear;
+      vertical-align: middle;
+
+      &:rotate {
+        transform: rotate(180deg);
+      }
+    }
+  }
 </style>
