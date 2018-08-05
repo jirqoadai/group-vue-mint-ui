@@ -14,6 +14,7 @@ import Lazy from '@/components/Lazy'
 import Badge from '@/components/Badge'
 import Btn from '@/components/Btn'
 import CellSwiper from '@/components/CellSwiper'
+import CheckList from '@/components/checklist'
 
 Vue.use(Router)
 
@@ -75,6 +76,10 @@ export default new Router({
       path: '/cell-swiper',
       name: 'CellSwiper',
       component: CellSwiper
+    }, {
+      path: '/checklist',
+      name: 'CheckList',
+      component: CheckList
     }
   ]
 })
