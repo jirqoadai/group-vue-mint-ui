@@ -10,7 +10,8 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
+@import 'reset.scss';
 .page-demo {
     padding-bottom: 50px;
     .indexicon {
