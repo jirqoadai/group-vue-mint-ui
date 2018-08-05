@@ -1,57 +1,82 @@
 <template>
-  <div class="page-toast">
-    <h1 class="page-title">Toast</h1>
-    <div class="page-toast-wrapper">
-      <mt-button @click.native="openToast" size="large">点击弹出 Toast</mt-button>
-      <mt-button @click.native="openToastWithIcon" size="large">点击弹出带有 icon 的 Toast</mt-button>
-      <mt-button @click.native="openBottomToast" size="large">自定义 Toast 位置</mt-button>
+  <div class="page-infinite">
+    <h1 class="page-title">Infinite Scroll</h1>
+    <p class="page-infinite-desc">当即将滚动至列表底部时, 自动加载更多数据</p>
+    <div class="page-infinite-wrapper" ref="wrapper" :style="{ height: wrapperHeight + 'px' }">
+      <ul class="page-infinite-list" v-infinite-scroll="loadMore" infinite-scroll-disabled="loading" infinite-scroll-distance="50">
+        <li v-for="item in list" class="page-infinite-listitem" v-bind:key="item.index">{{ item }}</li>
+      </ul>
+      <p v-show="loading" class="page-infinite-loading">
+        <mt-spinner type="fading-circle" class="center"></mt-spinner>
+        加载中...
+      </p>
     </div>
   </div>
 </template>
 
-<script>
-import { Toast } from 'mint-ui'
+<style scoped lang="scss">
+.page-infinite-desc {
+  text-align: center;
+  color: #666;
+  padding-bottom: 5px;
+  border-bottom: solid 1px #eee;
+}
+
+.page-infinite-listitem {
+  height: 50px;
+  line-height: 50px;
+  border-bottom: solid 1px #eee;
+  text-align: center;
+  &:first-child {
+    border-top: solid 1px #eee;
+  }
+}
+
+.page-infinite-wrapper {
+  margin-top: -1px;
+  overflow: scroll;
+}
+
+.page-infinite-loading {
+  text-align: center;
+  height: 50px;
+  line-height: 50px;
+}
+.center div{
+  transform: translate(50vw, 50%);
+  transform-origin: center center;
+}
+</style>
+
+<script type="text/babel">
 export default {
-  name: 'Scroll',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      list: [],
+      loading: false,
+      allLoaded: false,
+      wrapperHeight: 0
     }
   },
+
   methods: {
-    openToast () {
-      Toast('提示信息')
-    },
-    openToastWithIcon () {
-      Toast({
-        message: '操作成功',
-        iconClass: 'mintui mintui-success'
-      })
-    },
-    openBottomToast () {
-      Toast({
-        message: '提示信息',
-        position: 'bottom'
-      })
+    loadMore () {
+      this.loading = true
+      setTimeout(() => {
+        let last = this.list[this.list.length - 1]
+        for (let i = 1; i <= 10; i++) {
+          this.list.push(last + i)
+        }
+        this.loading = false
+      }, 2500)
+    }
+  },
+
+  mounted () {
+    this.wrapperHeight = document.documentElement.clientHeight - this.$refs.wrapper.getBoundingClientRect().top
+    for (let i = 1; i <= 20; i++) {
+      this.list.push(i)
     }
   }
 }
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-h1, h2 {
-  font-weight: normal;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
-</style>
