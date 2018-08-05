@@ -45,57 +45,50 @@
   </div>
 </template>
 
-<style>
-  @component-namespace page {
-    @component datetime {
-      @descendent wrapper {
-        padding: 0 20px;
-        position: absolute 50% * * *;
-        width: 100%;
-        transform: translateY(-50%);
-
-        button:not:(last-child) {
-          margin-bottom: 20px;
-        }
-      }
-    }
+<style lang="scss">
+.page-datetime-wrapper {
+  padding: 0 20px;
+  position: absolute;
+  width: 100%;
+  button{
+    margin-bottom: 20px;
   }
+}
 </style>
 
 <script type="text/babel">
-  import { Toast } from 'src/index';
+import { Toast } from 'mint-ui'
+export default {
+  data () {
+    return {
+      value: null,
+      value2: null,
+      value3: null,
+      value4: null,
+      value5: '04:32',
+      visible: false,
+      visible2: false,
+      visible3: false,
+      visible4: false,
+      visible5: false
+    }
+  },
 
-  export default {
-    data() {
-      return {
-        value: null,
-        value2: null,
-        value3: null,
-        value4: null,
-        value5: '04:32',
-        visible: false,
-        visible2: false,
-        visible3: false,
-        visible4: false,
-        visible5: false
-      };
+  methods: {
+    open (picker) {
+      this.$refs[picker].open()
     },
 
-    methods: {
-      open(picker) {
-        this.$refs[picker].open();
-      },
+    handleChange (value) {
+      Toast({
+        message: '已选择 ' + value.toString(),
+        position: 'bottom'
+      })
+    },
 
-      handleChange(value) {
-        Toast({
-          message: '已选择 ' + value.toString(),
-          position: 'bottom'
-        });
-      },
-
-      handleVisibleChange(isVisible) {
-        console.log('弹窗是否展示:', isVisible);
-      }
+    handleVisibleChange (isVisible) {
+      console.log('弹窗是否展示:', isVisible)
     }
-  };
+  }
+}
 </script>

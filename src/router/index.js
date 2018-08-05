@@ -15,6 +15,7 @@ import Badge from '@/components/Badge'
 import Btn from '@/components/Btn'
 import CellSwiper from '@/components/CellSwiper'
 import CheckList from '@/components/checklist'
+import DateTimePicker from '@/components/datetime-picker'
 
 Vue.use(Router)
 
@@ -80,6 +81,10 @@ export default new Router({
       path: '/checklist',
       name: 'CheckList',
       component: CheckList
+    }, {
+      path: '/datetime-picker',
+      name: 'DateTimePicker',
+      component: DateTimePicker
     }
   ]
 })
