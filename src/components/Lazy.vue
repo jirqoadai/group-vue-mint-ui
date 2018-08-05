@@ -1,57 +1,53 @@
 <template>
-  <div class="page-toast">
-    <h1 class="page-title">Toast</h1>
-    <div class="page-toast-wrapper">
-      <mt-button @click.native="openToast" size="large">点击弹出 Toast</mt-button>
-      <mt-button @click.native="openToastWithIcon" size="large">点击弹出带有 icon 的 Toast</mt-button>
-      <mt-button @click.native="openBottomToast" size="large">自定义 Toast 位置</mt-button>
-    </div>
+  <div class="page-lazyload">
+    <h1 class="page-title">Lazy Load</h1>
+    <ul class="page-lazyload-list">
+      <li class="page-lazyload-listitem" v-for="item in list" v-bind:key="item.index">
+        <img v-lazy="item" class="page-lazyload-image">
+      </li>
+    </ul>
   </div>
 </template>
 
-<script>
-import { Toast } from 'mint-ui'
+<style lang="scss">
+.page-lazyload {
+  .page-lazyload-list {
+    text-align: center;
+  }
+
+  .page-lazyload-listitem {
+    width: 300px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    background-color: #ddd;
+  }
+
+  .page-lazyload-image {
+    display: block;
+    width: 100%;
+  }
+
+  .page-lazyload-image[lazy=loading] {
+    width: 40px;
+    height: 300px;
+    margin: auto;
+  }
+}
+</style>
+
+<script type="text/babel">
 export default {
-  name: 'Lazy',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
-    }
-  },
-  methods: {
-    openToast () {
-      Toast('提示信息')
-    },
-    openToastWithIcon () {
-      Toast({
-        message: '操作成功',
-        iconClass: 'mintui mintui-success'
-      })
-    },
-    openBottomToast () {
-      Toast({
-        message: '提示信息',
-        position: 'bottom'
-      })
+      list: [
+        'http://fuss10.elemecdn.com/b/18/0678e57cb1b226c04888e7f244c20jpeg.jpeg',
+        'http://fuss10.elemecdn.com/3/1e/42634e29812e6594c98a89e922c60jpeg.jpeg',
+        'http://fuss10.elemecdn.com/1/c5/95c37272d3e554317dcec1e17a9f5jpeg.jpeg',
+        'http://fuss10.elemecdn.com/7/85/e478e4b26af74f4539c79f31fde80jpeg.jpeg',
+        'http://fuss10.elemecdn.com/b/df/b630636b444346e38cef6c59f6457jpeg.jpeg',
+        'http://fuss10.elemecdn.com/7/a5/596ab03934612236f807b92906fd8jpeg.jpeg'
+      ]
     }
   }
 }
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-h1, h2 {
-  font-weight: normal;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
-</style>
