@@ -1,57 +1,66 @@
 <template>
-  <div class="page-toast">
-    <h1 class="page-title">Toast</h1>
-    <div class="page-toast-wrapper">
-      <mt-button @click.native="openToast" size="large">点击弹出 Toast</mt-button>
-      <mt-button @click.native="openToastWithIcon" size="large">点击弹出带有 icon 的 Toast</mt-button>
-      <mt-button @click.native="openBottomToast" size="large">自定义 Toast 位置</mt-button>
+  <div class="page-actionsheet">
+    <h1 class="page-title">Action Sheet</h1>
+    <div class="page-actionsheet-wrapper">
+      <mt-button @click.native="sheetVisible = true" size="large">点击上拉 action sheet</mt-button>
+      <mt-button @click.native="sheetVisible2 = true" size="large">不带取消按钮的 action sheet</mt-button>
     </div>
+    <mt-actionsheet :actions="actions" v-model="sheetVisible"></mt-actionsheet>
+    <mt-actionsheet :actions="actions2" v-model="sheetVisible2" cancel-text=""></mt-actionsheet>
   </div>
 </template>
 
-<script>
-import { Toast } from 'mint-ui'
+<style lang="scss">
+.page-actionsheet-wrapper {
+  padding: 0 20px;
+  position: absolute;
+  width: 100%;
+  transform: translateY(50%);
+  button:first-child {
+    margin-bottom: 20px;
+  }
+}
+</style>
+
+<script type="text/babel">
 export default {
-  name: 'Action',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      sheetVisible: false,
+      sheetVisible2: false,
+      actions: [],
+      actions2: []
     }
   },
+
   methods: {
-    openToast () {
-      Toast('提示信息')
+    takePhoto () {
+      console.log('taking photo')
     },
-    openToastWithIcon () {
-      Toast({
-        message: '操作成功',
-        iconClass: 'mintui mintui-success'
-      })
+
+    openAlbum () {
+      console.log('opening album')
     },
-    openBottomToast () {
-      Toast({
-        message: '提示信息',
-        position: 'bottom'
-      })
+
+    goBack () {
+      history.go(-1)
     }
+  },
+
+  mounted () {
+    this.actions = [{
+      name: '拍照',
+      method: this.takePhoto
+    }, {
+      name: '从相册中选择',
+      method: this.openAlbum
+    }]
+    this.actions2 = [{
+      name: '确定'
+    }, {
+      name: '返回上一步',
+      method: this.goBack
+    }]
   }
 }
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-h1, h2 {
-  font-weight: normal;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
-</style>
