@@ -11,6 +11,9 @@ import Action from '@/components/Action'
 import Popup from '@/components/Popup'
 import Swiper from '@/components/Swiper'
 import Lazy from '@/components/Lazy'
+import Badge from '@/components/Badge'
+import Btn from '@/components/Btn'
+import CellSwiper from '@/components/CellSwiper'
 
 Vue.use(Router)
 
@@ -60,6 +63,18 @@ export default new Router({
       path: '/lazy',
       name: 'Lazy',
       component: Lazy
+    }, {
+      path: '/badge',
+      name: 'Badge',
+      component: Badge
+    }, {
+      path: '/button',
+      name: 'Btn',
+      component: Btn
+    }, {
+      path: '/cell-swiper',
+      name: 'CellSwiper',
+      component: CellSwiper
     }
   ]
 })

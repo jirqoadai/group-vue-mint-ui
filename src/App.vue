@@ -12,6 +12,7 @@ export default {
 
 <style lang="scss">
 @import 'reset.scss';
+@import 'font.scss';
 .page-demo {
     padding-bottom: 50px;
     .indexicon {
