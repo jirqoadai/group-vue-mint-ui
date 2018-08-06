@@ -43,33 +43,24 @@
 
 <script>
 export default {
-  name: 'header',
-
-  data() {
-    return {
-
-    };
+  data () {
+    return {}
   },
-
   methods: {
-    handleClose() {
-      alert('close this page');
+    handleClose () {
+      alert('close this page')
     }
   }
-};
+}
 </script>
 
 <style lang="css">
-  @component-namespace page {
-    @component header {
-      @descendent main {
-        margin-top: 50px;
-        min-height: 120vh;
+.page-header-main {
+  margin-top: 50px;
+  min-height: 120vh;
 
-        > * {
-          margin-bottom: 15px;
-        }
-      }
-    }
+  > * {
+    margin-bottom: 15px;
   }
+}
 </style>

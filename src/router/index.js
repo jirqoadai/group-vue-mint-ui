@@ -16,6 +16,8 @@ import Btn from '@/components/Btn'
 import CellSwiper from '@/components/CellSwiper'
 import CheckList from '@/components/checklist'
 import DateTimePicker from '@/components/datetime-picker'
+import Field from '@/components/field'
+import Header from '@/components/header'
 
 Vue.use(Router)
 
@@ -85,6 +87,21 @@ export default new Router({
       path: '/datetime-picker',
       name: 'DateTimePicker',
       component: DateTimePicker
+    }, {
+      path: '/field',
+      name: 'Field',
+      component: Field
+    }, {
+      path: '/header',
+      name: 'Header',
+      component: Header
     }
-  ]
+  ],
+  scrollBehavior (to, from, savedPosition) {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve({ x: 0, y: 0 })
+      }, 500)
+    })
+  }
 })
