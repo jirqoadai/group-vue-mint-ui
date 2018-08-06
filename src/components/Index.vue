@@ -6,7 +6,7 @@
       <section class="page-demo">
         <div>
           <div class="page-title">JS Components</div>
-          <a href="/#/toast" class="mint-cell">
+          <a href="/index.html#/toast" class="mint-cell">
             <span class="mint-cell-mask"></span>
             <div class="mint-cell-left"></div>
             <div class="mint-cell-wrapper">
@@ -24,7 +24,7 @@
           </div>
           <div class="mint-cell-right"></div>
           </a>
-          <a href="/#/loading" class="mint-cell">
+          <a href="/index.html#/loading" class="mint-cell">
             <span class="mint-cell-mask">
             </span>
             <div class="mint-cell-left">
@@ -44,7 +44,7 @@
             <div class="mint-cell-right">
             </div>
           </a>
-          <a href="/#/pulldown" class="mint-cell">
+          <a href="/index.html#/pulldown" class="mint-cell">
             <span class="mint-cell-mask"></span>
           <div class="mint-cell-left"></div>
           <div class="mint-cell-wrapper">
@@ -61,7 +61,7 @@
           </div>
           <div class="mint-cell-right"></div>
         </a>
-          <a href="/#/pullup" class="mint-cell">
+          <a href="/index.html#/pullup" class="mint-cell">
             <span class="mint-cell-mask"></span>
             <div class="mint-cell-left"></div>
             <div class="mint-cell-wrapper">
@@ -78,7 +78,7 @@
             </div>
             <div class="mint-cell-right"></div>
           </a>
-          <a href="/#/scroll" class="mint-cell">
+          <a href="/index.html#/scroll" class="mint-cell">
             <span class="mint-cell-mask"></span>
             <div class="mint-cell-left"></div>
             <div class="mint-cell-wrapper">
@@ -95,7 +95,7 @@
             </div>
             <div class="mint-cell-right"></div>
           </a>
-          <a href="/#/message" class="mint-cell">
+          <a href="/index.html#/message" class="mint-cell">
             <span class="mint-cell-mask"></span>
             <div class="mint-cell-left"></div>
             <div class="mint-cell-wrapper">
@@ -112,7 +112,7 @@
             </div>
             <div class="mint-cell-right"></div>
           </a>
-          <a href="/#/action" class="mint-cell">
+          <a href="/index.html#/action" class="mint-cell">
             <span class="mint-cell-mask"></span>
             <div class="mint-cell-left"></div>
             <div class="mint-cell-wrapper">
@@ -129,7 +129,7 @@
             </div>
             <div class="mint-cell-right"></div>
           </a>
-          <a href="/#/popup" class="mint-cell">
+          <a href="/index.html#/popup" class="mint-cell">
             <span class="mint-cell-mask"></span>
             <div class="mint-cell-left"></div>
             <div class="mint-cell-wrapper">
@@ -146,7 +146,7 @@
             </div>
             <div class="mint-cell-right"></div>
           </a>
-          <a href="/#/swiper" class="mint-cell">
+          <a href="/index.html#/swiper" class="mint-cell">
             <span class="mint-cell-mask"></span>
             <div class="mint-cell-left"></div>
             <div class="mint-cell-wrapper">
@@ -163,7 +163,7 @@
             </div>
             <div class="mint-cell-right"></div>
           </a>
-          <a href="/#/lazy" class="mint-cell">
+          <a href="/index.html#/lazy" class="mint-cell">
             <span class="mint-cell-mask"></span>
             <div class="mint-cell-left"></div>
             <div class="mint-cell-wrapper">
@@ -180,7 +180,7 @@
             </div>
             <div class="mint-cell-right"></div>
           </a>
-          <a href="/#/range" class="mint-cell">
+          <a href="/index.html#/range" class="mint-cell">
             <span class="mint-cell-mask"></span>
             <div class="mint-cell-left"></div>
             <div class="mint-cell-wrapper">
@@ -197,7 +197,7 @@
             </div>
             <div class="mint-cell-right"></div>
           </a>
-          <a href="/#/progress" class="mint-cell">
+          <a href="/index.html#/progress" class="mint-cell">
             <span class="mint-cell-mask"></span>
             <div class="mint-cell-left"></div>
             <div class="mint-cell-wrapper">
@@ -214,7 +214,7 @@
             </div>
             <div class="mint-cell-right"></div>
           </a>
-          <a href="/#/picker" class="mint-cell">
+          <a href="/index.html#/picker" class="mint-cell">
             <span class="mint-cell-mask"></span>
             <div class="mint-cell-left"></div>
             <div class="mint-cell-wrapper">
@@ -231,7 +231,7 @@
             </div>
             <div class="mint-cell-right"></div>
           </a>
-          <a href="/#/datetime-picker" class="mint-cell">
+          <a href="/index.html#/datetime-picker" class="mint-cell">
             <span class="mint-cell-mask"></span>
             <div class="mint-cell-left"></div>
             <div class="mint-cell-wrapper">
@@ -248,7 +248,7 @@
             </div>
             <div class="mint-cell-right"></div>
           </a>
-          <a href="/#/index-list" class="mint-cell">
+          <a href="/index.html#/index-list" class="mint-cell">
             <span class="mint-cell-mask"></span>
             <div class="mint-cell-left"></div>
             <div class="mint-cell-wrapper">
@@ -265,7 +265,7 @@
             </div>
             <div class="mint-cell-right"></div>
           </a>
-          <a href="/#/palette-button" class="mint-cell">
+          <a href="/index.html#/palette-button" class="mint-cell">
             <span class="mint-cell-mask"></span>
             <div class="mint-cell-left"></div>
             <div class="mint-cell-wrapper">
@@ -282,7 +282,7 @@
             </div>
             <div class="mint-cell-right"></div>
           </a></div><div><div class="page-title">CSS Components</div>
-          <a href="/#/header" class="mint-cell">
+          <a href="/index.html#/header" class="mint-cell">
             <span class="mint-cell-mask"></span>
             <div class="mint-cell-left"></div>
             <div class="mint-cell-wrapper">
@@ -299,7 +299,7 @@
             </div>
             <div class="mint-cell-right"></div>
           </a>
-          <a href="/#/tabbar" class="mint-cell">
+          <a href="/index.html#/tabbar" class="mint-cell">
             <span class="mint-cell-mask"></span>
             <div class="mint-cell-left"></div>
             <div class="mint-cell-wrapper">
@@ -316,7 +316,7 @@
             </div>
             <div class="mint-cell-right"></div>
           </a>
-          <a href="/#/navbar" class="mint-cell">
+          <a href="/index.html#/navbar" class="mint-cell">
             <span class="mint-cell-mask"></span>
             <div class="mint-cell-left"></div>
             <div class="mint-cell-wrapper">
@@ -333,7 +333,7 @@
             </div>
             <div class="mint-cell-right"></div>
           </a>
-          <a href="/#/button" class="mint-cell">
+          <a href="/index.html#/button" class="mint-cell">
             <span class="mint-cell-mask"></span>
             <div class="mint-cell-left"></div>
             <div class="mint-cell-wrapper">
@@ -350,7 +350,7 @@
             </div>
             <div class="mint-cell-right"></div>
           </a>
-          <a href="/#/cell" class="mint-cell">
+          <a href="/index.html#/cell" class="mint-cell">
             <span class="mint-cell-mask"></span>
             <div class="mint-cell-left"></div>
             <div class="mint-cell-wrapper">
@@ -367,7 +367,7 @@
             </div>
             <div class="mint-cell-right"></div>
           </a>
-          <a href="/#/cell-swipe" class="mint-cell">
+          <a href="/index.html#/cell-swipe" class="mint-cell">
             <span class="mint-cell-mask"></span>
             <div class="mint-cell-left"></div>
             <div class="mint-cell-wrapper">
@@ -384,7 +384,7 @@
             </div>
             <div class="mint-cell-right"></div>
           </a>
-          <a href="/#/spinner" class="mint-cell">
+          <a href="/index.html#/spinner" class="mint-cell">
             <span class="mint-cell-mask"></span>
             <div class="mint-cell-left"></div>
             <div class="mint-cell-wrapper">
@@ -401,7 +401,7 @@
             </div>
             <div class="mint-cell-right"></div>
           </a>
-          <a href="/#/tab-container" class="mint-cell">
+          <a href="/index.html#/tab-container" class="mint-cell">
             <span class="mint-cell-mask"></span>
             <div class="mint-cell-left"></div>
             <div class="mint-cell-wrapper">
@@ -418,7 +418,7 @@
             </div>
             <div class="mint-cell-right"></div>
           </a>
-          <a href="/#/search" class="mint-cell">
+          <a href="/index.html#/search" class="mint-cell">
             <span class="mint-cell-mask"></span>
             <div class="mint-cell-left"></div>
             <div class="mint-cell-wrapper">
@@ -438,7 +438,7 @@
         </div>
         <div>
           <div class="page-title">Form Components</div>
-          <a href="/#/switch" class="mint-cell">
+          <a href="/index.html#/switch" class="mint-cell">
             <span class="mint-cell-mask"></span>
             <div class="mint-cell-left"></div>
             <div class="mint-cell-wrapper">
@@ -455,7 +455,7 @@
             </div>
             <div class="mint-cell-right"></div>
           </a>
-          <a href="/#/checklist" class="mint-cell">
+          <a href="/index.html#/checklist" class="mint-cell">
             <span class="mint-cell-mask"></span>
             <div class="mint-cell-left"></div>
             <div class="mint-cell-wrapper">
@@ -472,7 +472,7 @@
             </div>
             <div class="mint-cell-right"></div>
           </a>
-          <a href="/#/radio" class="mint-cell">
+          <a href="/index.html#/radio" class="mint-cell">
             <span class="mint-cell-mask"></span>
             <div class="mint-cell-left"></div>
             <div class="mint-cell-wrapper">
@@ -489,7 +489,7 @@
             </div>
             <div class="mint-cell-right"></div>
           </a>
-          <a href="/#/field" class="mint-cell">
+          <a href="/index.html#/field" class="mint-cell">
             <span class="mint-cell-mask"></span>
             <div class="mint-cell-left"></div>
             <div class="mint-cell-wrapper">
@@ -506,7 +506,7 @@
             </div>
             <div class="mint-cell-right"></div>
           </a>
-          <a href="/#/badge" class="mint-cell">
+          <a href="/index.html#/badge" class="mint-cell">
             <span class="mint-cell-mask"></span>
             <div class="mint-cell-left"></div>
             <div class="mint-cell-wrapper">
