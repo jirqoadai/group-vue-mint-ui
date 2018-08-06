@@ -21,6 +21,7 @@ import Header from '@/components/header'
 import IndexList from '@/components/index-list'
 import Navbar from '@/components/navbar'
 import Palette from '@/components/palette-button'
+import Picker from '@/components/picker'
 
 Vue.use(Router)
 
@@ -110,6 +111,10 @@ export default new Router({
       path: '/palette-button',
       name: 'Palette',
       component: Palette
+    }, {
+      path: '/picker',
+      name: 'Picker',
+      component: Picker
     }
   ],
   scrollBehavior (to, from, savedPosition) {
