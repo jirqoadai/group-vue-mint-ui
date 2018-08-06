@@ -26,6 +26,7 @@ import Progress from '@/components/progress'
 import Radio from '@/components/radio'
 import Range from '@/components/range'
 import Search from '@/components/search'
+import Switch from '@/components/switch'
 
 Vue.use(Router)
 
@@ -135,6 +136,10 @@ export default new Router({
       path: '/search',
       name: 'Search',
       component: Search
+    }, {
+      path: '/switch',
+      name: 'Switch',
+      component: Switch
     }
   ],
   scrollBehavior (to, from, savedPosition) {

@@ -24,29 +24,27 @@
 
 <script>
 export default {
-  name: 'page-switch',
-
-  data() {
+  data () {
     return {
       value1: false,
       value2: false,
       value3: true,
       value4: true
-    };
+    }
   },
 
   methods: {
-    handleChange(event) {
-      console.log(event);
+    handleChange (event) {
+      console.log(event)
     }
   }
-};
+}
 </script>
 
-<style lang="css">
-  @component-namespace page {
-    @component switch {
-      @descendent padding {
+<style lang="scss">
+  .page {
+    &-switch {
+      &-padding {
         padding: 0 10px;
       }
     }
