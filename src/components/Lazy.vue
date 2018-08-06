@@ -9,7 +9,7 @@
   </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .page-lazyload {
   .page-lazyload-list {
     text-align: center;

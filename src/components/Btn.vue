@@ -46,7 +46,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .page-button {
   padding: 0 15px 15px;
   .page-button-group {

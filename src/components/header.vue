@@ -54,7 +54,7 @@ export default {
 }
 </script>
 
-<style lang="css">
+<style lang="css" scoped>
 .page-header-main {
   margin-top: 50px;
   min-height: 120vh;

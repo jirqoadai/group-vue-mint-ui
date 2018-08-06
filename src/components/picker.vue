@@ -27,7 +27,7 @@
   </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .page {
   &-picker {
     padding: 0 10px 20px;

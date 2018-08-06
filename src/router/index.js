@@ -26,7 +26,9 @@ import Progress from '@/components/progress'
 import Radio from '@/components/radio'
 import Range from '@/components/range'
 import Search from '@/components/search'
+import Spinner from '@/components/spinner'
 import Switch from '@/components/switch'
+import TabContainer from '@/components/tab-container'
 
 Vue.use(Router)
 
@@ -140,6 +142,14 @@ export default new Router({
       path: '/switch',
       name: 'Switch',
       component: Switch
+    }, {
+      path: '/spinner',
+      name: 'Spinner',
+      component: Spinner
+    }, {
+      path: '/tab-container',
+      name: 'TabContainer',
+      component: TabContainer
     }
   ],
   scrollBehavior (to, from, savedPosition) {

@@ -25,7 +25,7 @@
   </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .page {
   &-range {
     .mt-range {

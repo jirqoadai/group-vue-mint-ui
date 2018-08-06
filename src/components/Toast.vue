@@ -39,20 +39,16 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style>
+<style lang="scss" scoped>
 button {
   margin-bottom: 20px;
 }
-@component-namespace page {
-    @component toast {
-      @descendent wrapper {
+.page {
+    &-toast {
+      &-wrapper {
         padding: 0 20px;
-        position: absolute 50% * * *;
+        position: absolute;
         width: 100%;
-        transform: translateY(-50%);
-        button:not(:last-child) {
-          margin-bottom: 20px;
-        }
       }
     }
   }

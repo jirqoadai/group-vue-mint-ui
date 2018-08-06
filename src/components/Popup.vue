@@ -25,7 +25,7 @@
   </div>
 </template>
 
-<style lang='scss'>
+<style lang='scss' scoped>
 .page-popup {
   .page-popup-wrapper {
     padding: 0 20px;

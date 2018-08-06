@@ -10,7 +10,7 @@
   </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .page-actionsheet-wrapper {
   padding: 0 20px;
   position: absolute;

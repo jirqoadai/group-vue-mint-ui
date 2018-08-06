@@ -367,7 +367,7 @@
             </div>
             <div class="mint-cell-right"></div>
           </a>
-          <a href="/index.html#/cell-swipe" class="mint-cell">
+          <a href="/index.html#/cell-swiper" class="mint-cell">
             <span class="mint-cell-mask"></span>
             <div class="mint-cell-left"></div>
             <div class="mint-cell-wrapper">

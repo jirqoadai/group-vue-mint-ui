@@ -85,7 +85,7 @@ export default {
 }
 </script>
 
-<style lang="css">
+<style lang="css" scoped>
   .page-checklist .page-part {
     margin-top: 40px;
   }

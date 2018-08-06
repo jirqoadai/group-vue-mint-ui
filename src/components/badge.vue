@@ -44,7 +44,7 @@ export default {
 }
 </script>
 
-<style lang="css">
+<style lang="css" scoped>
   .page-badge-container {
     padding: 0 10px;
   }

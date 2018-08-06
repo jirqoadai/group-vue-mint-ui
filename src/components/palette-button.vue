@@ -43,7 +43,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
   .pb{
     width: 60px;
     height: 60px;
