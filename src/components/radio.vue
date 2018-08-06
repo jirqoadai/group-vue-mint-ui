@@ -31,19 +31,17 @@
 
 <script>
 export default {
-  name: 'page-radio',
-
-  data() {
+  data () {
     return {
       value1: '',
       value2: '值A',
       value3: ''
-    };
+    }
   },
 
-  created() {
-    this.options1 = ['选项A', '选项B', '选项C'];
-    this.options3 = ['选项A', '选项B', '选项C'];
+  created () {
+    this.options1 = ['选项A', '选项B', '选项C']
+    this.options3 = ['选项A', '选项B', '选项C']
     this.options2 = [
       {
         label: '被禁用',
@@ -58,9 +56,9 @@ export default {
         label: '选项B',
         value: '值B'
       }
-    ];
+    ]
   }
-};
+}
 </script>
 
 <style lang="css">
@@ -68,4 +66,3 @@ export default {
     margin-top: 40px;
   }
 </style>
-

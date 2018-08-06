@@ -6,9 +6,7 @@
 
 <script>
 export default {
-  name: 'page-search',
-
-  data() {
+  data () {
     return {
       value: '',
       defaultResult: [
@@ -29,15 +27,14 @@ export default {
         'Peanut',
         'Other'
       ]
-    };
+    }
   },
-
   computed: {
-    filterResult() {
-      return this.defaultResult.filter(value => new RegExp(this.value, 'i').test(value));
+    filterResult () {
+      return this.defaultResult.filter(value => new RegExp(this.value, 'i').test(value))
     }
   }
-};
+}
 </script>
 
 <style lang="css">

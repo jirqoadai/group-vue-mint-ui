@@ -25,75 +25,75 @@
   </div>
 </template>
 
-<style>
-  @component-namespace page {
-    @component progress {
-      .mint-cell-value {
-        flex: 2.5;
-        position: relative;
-        top: -20px;
-      }
+<style lang="scss">
+.page {
+  &-progress {
+    .mint-cell-value {
+      flex: 2.5;
+      position: relative;
+      top: -20px;
+    }
+
+    .mt-progress {
+      width: 100%;
+      position: absolute;
+      top: 5px;
+    }
+
+    &-wrapper {
+      padding: 0 10px;
+      margin-top: 50px;
 
       .mt-progress {
-        width: 100%;
-        position: absolute;
-        top: 5px;
+        position: relative;
       }
 
-      @descendent wrapper {
-        padding: 0 10px;
-        margin-top: 50px;
+      .progress-fade-transition {
+        transition: opacity .3s;
+      }
 
-        .mt-progress {
-          position: relative;
-        }
-
-        .progress-fade-transition {
-          transition: opacity .3s;
-        }
-
-        .progress-fade-enter,
-        .progress-fade-leave {
-          opacity: 0;
-        }
+      .progress-fade-enter,
+      .progress-fade-leave {
+        opacity: 0;
       }
     }
   }
+}
 </style>
 
 <script type="text/babel">
-  import { Toast } from 'src/index';
+import { Toast } from 'mint-ui'
 
-  export default {
-    data() {
-      return {
-        progressVisible: false,
-        value: 0,
-        uploading: false,
-        timer: null
-      };
-    },
+export default {
+  data () {
+    return {
+      progressVisible: false,
+      value: 0,
+      uploading: false,
+      timer: null
+    }
+  },
 
-    watch: {
-      value(val) {
-        if (val >= 100) {
-          this.uploading = false;
-          this.progressVisible = false;
-          setTimeout(() => Toast({ message: '上传成功', position: 'bottom', duration: 1000 }), 200);
-          clearTimeout(this.timer);
-        }
-      }
-    },
-
-    methods: {
-      uploadFile() {
-        if (!this.uploading) {
-          this.value = 0;
-          this.progressVisible = true;
-          this.uploading = true;
-          this.timer = setInterval(() => this.value++, 10);
-        }
+  watch: {
+    value (val) {
+      if (val >= 100) {
+        this.uploading = false
+        this.progressVisible = false
+        setTimeout(() => Toast({ message: '上传成功', position: 'bottom', duration: 1000 }), 200)
+        clearTimeout(this.timer)
       }
     }
-  };
+  },
+
+  methods: {
+    uploadFile () {
+      if (!this.uploading) {
+        this.value = 0
+        this.progressVisible = true
+        this.uploading = true
+        this.timer = setInterval(() => this.value++, 10)
+      }
+    }
+  }
+}
 </script>

@@ -22,6 +22,10 @@ import IndexList from '@/components/index-list'
 import Navbar from '@/components/navbar'
 import Palette from '@/components/palette-button'
 import Picker from '@/components/picker'
+import Progress from '@/components/progress'
+import Radio from '@/components/radio'
+import Range from '@/components/range'
+import Search from '@/components/search'
 
 Vue.use(Router)
 
@@ -115,6 +119,22 @@ export default new Router({
       path: '/picker',
       name: 'Picker',
       component: Picker
+    }, {
+      path: '/progress',
+      name: 'Progress',
+      component: Progress
+    }, {
+      path: '/radio',
+      name: 'Radio',
+      component: Radio
+    }, {
+      path: '/range',
+      name: 'Range',
+      component: Range
+    }, {
+      path: '/search',
+      name: 'Search',
+      component: Search
     }
   ],
   scrollBehavior (to, from, savedPosition) {
