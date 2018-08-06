@@ -44,12 +44,12 @@ button {
   margin-bottom: 20px;
 }
 .page {
-    &-toast {
-      &-wrapper {
-        padding: 0 20px;
-        position: absolute;
-        width: 100%;
-      }
+  &-toast {
+    &-wrapper {
+      padding: 0 20px;
+      position: absolute;
+      width: 100%;
     }
   }
+}
 </style>

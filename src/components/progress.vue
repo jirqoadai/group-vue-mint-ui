@@ -25,7 +25,7 @@
   </div>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .page {
   &-progress {
     .mint-cell-value {

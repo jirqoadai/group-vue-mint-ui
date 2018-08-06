@@ -13,6 +13,7 @@ import Swiper from '@/components/Swiper'
 import Lazy from '@/components/Lazy'
 import Badge from '@/components/Badge'
 import Btn from '@/components/Btn'
+import Cell from '@/components/cell'
 import CellSwiper from '@/components/CellSwiper'
 import CheckList from '@/components/checklist'
 import DateTimePicker from '@/components/datetime-picker'
@@ -29,6 +30,7 @@ import Search from '@/components/search'
 import Spinner from '@/components/spinner'
 import Switch from '@/components/switch'
 import TabContainer from '@/components/tab-container'
+import TabBar from '@/components/tabbar'
 
 Vue.use(Router)
 
@@ -86,6 +88,10 @@ export default new Router({
       path: '/button',
       name: 'Btn',
       component: Btn
+    }, {
+      path: '/cell',
+      name: 'Cell',
+      component: Cell
     }, {
       path: '/cell-swiper',
       name: 'CellSwiper',
@@ -150,6 +156,10 @@ export default new Router({
       path: '/tab-container',
       name: 'TabContainer',
       component: TabContainer
+    }, {
+      path: '/tabbar',
+      name: 'TabBar',
+      component: TabBar
     }
   ],
   scrollBehavior (to, from, savedPosition) {
