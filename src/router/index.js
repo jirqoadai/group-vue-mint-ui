@@ -18,6 +18,9 @@ import CheckList from '@/components/checklist'
 import DateTimePicker from '@/components/datetime-picker'
 import Field from '@/components/field'
 import Header from '@/components/header'
+import IndexList from '@/components/index-list'
+import Navbar from '@/components/navbar'
+import Palette from '@/components/palette-button'
 
 Vue.use(Router)
 
@@ -95,6 +98,18 @@ export default new Router({
       path: '/header',
       name: 'Header',
       component: Header
+    }, {
+      path: '/index-list',
+      name: 'IndexList',
+      component: IndexList
+    }, {
+      path: '/navbar',
+      name: 'Navbar',
+      component: Navbar
+    }, {
+      path: '/palette-button',
+      name: 'Palette',
+      component: Palette
     }
   ],
   scrollBehavior (to, from, savedPosition) {
